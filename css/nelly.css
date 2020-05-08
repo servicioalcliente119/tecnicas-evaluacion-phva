@@ -1,0 +1,256 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** 1rem = 10px **/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    margin: 0;
+    /* height: 100%; */
+}
+
+/*--------BOTON DE INICIO---------*/
+.inicio{
+    /* border: 1px solid red; */
+    color: white;
+    background-image: radial-gradient( circle 1173px at -3.5% -4.8%,  rgba(255,140,16,1) 8.4%, rgba(255,26,26,1) 20.6%, rgba(0,64,249,1) 46.7%, rgba(131,201,8,1) 69.6%, rgba(255,230,28,1) 84.7% );
+    border-radius: 50%;
+    font-size: 3em;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    top:0.1em;
+    left: 0.2em;
+
+    animation: 1.8s foco infinite;
+}
+
+@keyframes foco{
+    50%{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    }
+
+    100%{
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
+    }
+}
+
+@-moz-keyframes foco{
+    50%{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    }
+
+    100%{
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
+    }
+}
+
+@-o-keyframes foco{
+    50%{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    }
+
+    100%{
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
+    }
+}
+
+@-ms-keyframes foco{
+    50%{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    }
+
+    100%{
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
+    }
+}
+/*-------FIN DE BOTON DE INICIO----------*/
+
+.header{
+    background-color: rgb(223, 63, 0);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.header > h2{
+    color: white;
+    font-size: 3em;
+}
+
+.contenedor{
+    background-image: linear-gradient( 109.6deg,  rgba(227,236,62,0.68) 11.2%, rgba(230,29,58,0.78) 91.3% );
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 5em;
+}
+
+.contenido{
+    width: 80%;
+}
+
+.contenido section {
+    width: 100%;
+}
+
+aside.autor{
+    width: 20%;
+    padding: 1em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sectionTecnicas{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.item{
+    border-radius: 2em;
+    background-image: radial-gradient( circle 827px at 47.3% 48%,  rgba(255,255,255,1) 0%, rgba(138,192,216,1) 90% );
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    width: 20em;
+    min-height: 30em;
+    margin-top: 2em;
+    padding: 1.5em;
+
+    animation: 1.5s entrada 1;
+}
+
+@keyframes entrada{
+    0%{
+        opacity: 0;
+        margin-top: 500px;
+    }
+
+    75%{
+        margin-top: -0.1em;
+    }
+
+    95%{
+        margin-top: 2em;
+    }
+}
+
+@-moz-keyframes entrada{
+    0%{
+        opacity: 0;
+        margin-top: 500px;
+    }
+
+    75%{
+        margin-top: -0.1em;
+    }
+
+    95%{
+        margin-top: 2em;
+    }
+}
+
+@-ms-keyframes entrada{
+    0%{
+        opacity: 0;
+        margin-top: 500px;
+    }
+
+    75%{
+        margin-top: -0.1em;
+    }
+
+    95%{
+        margin-top: 2em;
+    }
+}
+
+@-o-keyframes entrada{
+    0%{
+        opacity: 0;
+        margin-top: 500px;
+    }
+
+    75%{
+        margin-top: -0.1em;
+    }
+
+    95%{
+        margin-top: 2em;
+    }
+}
+
+.item > h2{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+aside.autor > figure {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1em;
+}
+
+aside.autor > figure > img {
+    width: 100%;
+    height: 100%;
+}
+
+aside.autor > span {
+    color: white;
+    font-weight: bolder;
+}
+
+aside.autor > p {
+    margin: 0.5em 0;
+    color: white;
+}
+
+.sectionPHVA{
+    background-image: linear-gradient( 109.6deg,  rgba(227,236,62,0.68) 11.2%, rgba(230,29,58,0.78) 91.3% );
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.cont-phva{
+    width: 100%;
+    padding-bottom: 3em;
+}
+
+.title-phva span{
+    display: block;
+    /* margin-top: 2em; */
+    text-align: center;
+    color: white;
+}
+.title-phva h2{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,189,189,1) 0%, rgba(255,216,168,1) 62%, rgba(255,248,168,1) 100.7% );
+    border-radius: 20px;
+    font-size: 2.5em;
+    padding: 1em;
+    color: rgb(255, 51, 0);
+    display: inline-block;
+}
+
+.articulos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+hr{
+    margin: 3em 6em 0 6em;
+}

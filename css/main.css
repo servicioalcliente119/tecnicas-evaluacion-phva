@@ -1,0 +1,323 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** 1rem = 10px **/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    height: 100px;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+header::before {
+    content: '';
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background-color: black;
+    opacity: .5;
+    z-index: -1;
+
+}
+
+h1{
+    margin: 0 1em;
+    color: white;
+    font-size: 2em;
+    line-height: 1em;
+    text-shadow: 4px 4px 5px rgba(0,0,0,.6);
+}
+
+@media (min-width: 992px) {
+    h1{
+        font-size: 3em;
+    }   
+}
+
+.contenedor{
+    margin:0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+.seccion-contenido {
+    width: 100%;
+    padding: 0 1em;
+}
+
+.seccion-contenido h2{
+    color:rgb(34, 34, 34);
+    text-shadow: 4px 4px 6px rgba(0,0,0,.75);
+    text-align: center;
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.primer-bloque{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+@media (min-width:1230px ) {
+    .primer-bloque{
+        justify-content: space-around;
+    }
+}
+
+.segundo-bloque{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+form{
+    margin: 0;
+    animation: 1s entrada 1;
+}
+
+@keyframes entrada{
+    0%{
+        opacity: 0;
+        margin-top: 80px;
+    }
+    50%{
+        margin-top: -10px;
+    }
+    98%{
+        margin: 0;
+    }
+}
+
+@-moz-keyframes entrada{
+    0%{
+        opacity: 0;
+        margin-top: 80px;
+    }
+    50%{
+        margin-top: -10px;
+    }
+    98%{
+        margin: 0;
+    }
+}
+
+@-o-keyframes entrada{
+    0%{
+        opacity: 0;
+        margin-top: 80px;
+    }
+    50%{
+        margin-top: -10px;
+    }
+    98%{
+        margin: 0;
+    }
+}
+
+@-ms-keyframes entrada{
+    0%{
+        opacity: 0;
+        margin-top: 80px;
+    }
+    50%{
+        margin-top: -10px;
+    }
+    98%{
+        margin: 0;
+    }
+}
+.tecnica{
+    width: 320px;
+    height: 160px;
+    text-align: center;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.7);
+    margin: 1.5em 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    transition: linear .3s;
+    border: none;
+}
+
+.scale-t:hover{
+    transform: scale(1.2);
+}
+
+
+.tecnica:before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    transition: ease-in-out .3s;
+}
+
+.tecnica::after{
+    content:'';
+    background: rgba(0,0,0,.6);
+    color: white;
+    font-size: 1.5em;
+    line-height: 1em;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: -50%;
+    transition: ease-in-out .5s;
+}
+
+.tecnica:hover::after{
+    cursor: pointer;
+    bottom: 0;
+}
+
+.tecnica:hover::before {
+    cursor: pointer;
+    bottom: -0;
+}
+/**********************************************/
+.tecnica.est1::before{
+    content:'';
+    background: url('../img/encuesta.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.tecnica.est1::before{
+    content:'';
+    background: url('../img/encuesta.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.tecnica.est2::before{
+    content:'';
+    background: url('../img/auditoria.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.tecnica.est3::before{
+    content:'';
+    background: url('../img/clienteInterno.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.tecnica.est4::before{
+    content:'';
+    background: url('../img/comprador.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.tecnica.est5::before{
+    content:'';
+    background: url('../img/posventa.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/********************************************/
+.tecnica.est1::after{
+    content:'Encuestas de servicio';
+    padding: 1em;
+}
+
+.tecnica.est2::after{
+    content:'Auditoría Interna y Externa';
+    padding: 1em;
+}
+
+.tecnica.est3::after{
+    content:'Atención al Cliente Interno';
+    padding: 1em;
+}
+
+.tecnica.est4::after{
+    content:'Compras Misteriosas';
+    padding: 1em;
+}
+
+.tecnica.est5::after{
+    content:'Servicio Posventa';
+    padding: 1em;
+}
+
+/****************************************/
+
+.tecnica figure{
+    width:80px;
+    height: 80px;
+    margin: 0.5em;
+}
+
+.tecnica>figure>img {
+    width: 100%;
+    height: 100%;
+}
+
+.tecnica a {
+    color:white;
+    display: inline-block;
+    text-shadow: 4px 4px 5px rgba(0,0,0,.75);
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.est1{
+    background-image: radial-gradient( circle 275px at -14% 125%,  rgba(255,255,255,1) 0%, rgba(218,134,182,1) 100.7% );
+}
+
+.est2{
+    background-image: radial-gradient( circle 997px at 5.8% 11.8%,  rgba(0,201,235,1) 0%, rgba(145,0,228,1) 90% );
+    /* background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%); */
+}
+
+.est3{
+    background-image: linear-gradient( 109.8deg,  rgba(250,111,152,1) 5.6%, rgba(255,189,55,1) 91.5% );    /* background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);  */
+}
+
+.est4{
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+.est5{
+    background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%); 
+}
+
